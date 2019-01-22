@@ -137,19 +137,6 @@ class LatticeNet:
                 self.epoch += 1
                 char_ids, lexicon_word_ids, word_length_tensor, labels = self.batchify_with_label(instance)
 
-                """print('*' * 100)
-                print(np.shape(char_ids),np.shape(lexicon_word_ids),np.shape(word_length_tensor),np.shape(labels))"""
-
-                """print('*' * 100)
-                print(char_ids)
-                print('*' * 100)
-                print(lexicon_word_ids)
-                print('*' * 100)
-                print(word_length_tensor)
-                print('*' * 100)
-                print(labels)
-                print('*' * 100)"""
-
                 #run模型
                 feed_dict = {
                     self.placeholders["char_ids"]:char_ids,
